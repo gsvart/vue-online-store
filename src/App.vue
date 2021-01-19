@@ -1,15 +1,17 @@
 <template>
   <div id="app">
     <p>Hello world!</p>
+    <vos-main-wrapper/>
   </div>
 </template>
 
 <script>
+import VosMainWrapper from './components/vos-main-wrapper.vue'
 
 export default {
   name: 'App',
   components: {
-    
+    VosMainWrapper
   }
 }
 </script>
