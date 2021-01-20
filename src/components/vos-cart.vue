@@ -1,6 +1,6 @@
 <template>
   <div class="vos-cart">
-    {{ title }}
+    
   </div>
 </template>
 
