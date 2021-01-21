@@ -4,7 +4,10 @@
     <p class="vos-catalog-item__name"><b>{{ product_data.name }}</b></p>
     <p class="vos-catalog-item__gender">Пол: <b>{{ product_data.category }}</b></p>
     <p class="vos-catalog-item__price">Цена: <b>{{ product_data.price }} Р.</b></p>
-    <button class="vos-catalog-item__cart-btn btn">Добавить в корзину</button>
+    <button 
+      class="vos-catalog-item__cart-btn btn"
+      @click="addToCart"  
+    >Добавить в корзину</button>
   </div>
 </template>
 
@@ -23,6 +26,11 @@ export default {
   data() {
     return {
       title: 'vos-catalog-item'
+    }
+  },
+  methods: {
+    addToCart() {
+      this.$emit('addToCart', this.product_data.article)
     }
   }
 }

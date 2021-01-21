@@ -6,6 +6,7 @@
         v-for="product in products"
         :key="product.article"
         :product_data="product"
+        @addToCart="addToCart"
       />
     </div>
   </div>
@@ -71,6 +72,11 @@ export default {
           category: "Мужские"
         }
       ]
+    }
+  },
+  methods: {
+    addToCart(data) {
+      console.log(data)
     }
   }
 }
