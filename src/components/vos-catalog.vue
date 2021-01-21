@@ -1,6 +1,6 @@
 <template>
   <div class="vos-catalog">
-    <h1>{{ title }}:</h1>
+    <h1>{{ title }}: {{ activeItem }}</h1>
     <div class="vos-catalog__list">
       <vos-catalog-item
         v-for="product in products"
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       title: 'Catalog',
+      activeItem: 0,
       products: [
         {
           image: "w1.jpg",
@@ -77,6 +78,7 @@ export default {
   methods: {
     addToCart(data) {
       console.log(data)
+      this.activeItem = data
     }
   }
 }
