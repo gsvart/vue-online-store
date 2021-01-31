@@ -40,6 +40,12 @@ export default {
   },
   mounted() {
     this.GET_PRODUCTS_LIST()
+    // Вызываем какое-либо действие приуспешном выполнении запроса
+    .then((response) => {
+      if (response.data) {
+        console.log('Данные получены.');
+      }
+    })
   }
 }
 </script>
