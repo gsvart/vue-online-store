@@ -1,13 +1,14 @@
 <template>
   <div class="vos-main-wrapper">
     <vos-catalog/>
-    <vos-cart/>
+    <vos-cart v-if="CART.length"/>
   </div>
 </template>
 
 <script>
 import VosCatalog from './vos-catalog.vue'
 import VosCart from './vos-cart.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'vos-main-wrapper',
@@ -17,6 +18,11 @@ export default {
     return {
       title: 'main-wrapper'
     }
+  },
+  computed: {
+    ...mapGetters([
+      'CART'
+    ])
   }
 }
 </script>

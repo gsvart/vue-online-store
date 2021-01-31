@@ -6,7 +6,8 @@ Vue.use(Vuex);
 
 let store = new Vuex.Store({
   state: {
-    products: []
+    products: [],
+    cart: []
   },
   mutations: {
     SET_PRODUCTS_LIST: (state, products) => {
@@ -31,6 +32,9 @@ let store = new Vuex.Store({
   getters: {
     PRODUCTS_LIST(state) {
       return state.products;
+    },
+    CART(state) {
+      return state.cart;
     }
   }
 });
