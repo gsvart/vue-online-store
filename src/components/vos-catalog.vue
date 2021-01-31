@@ -34,8 +34,8 @@ export default {
       'GET_PRODUCTS_LIST'
     ]),
     addToCart(data) {
-      console.log(data)
-      this.activeItem = data
+      console.log(data);
+      this.activeItem = data;
     }
   },
   mounted() {
