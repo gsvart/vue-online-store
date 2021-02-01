@@ -1,7 +1,11 @@
 <template>
   <div class="vos-cart">
     <h2>Корзина</h2>
-    <vos-cart-item/>
+    <vos-cart-item 
+      v-for="item in cart_data" 
+      :key="item.article"
+      :cart_item_data="item"
+    />
   </div>
 </template>
 
@@ -11,10 +15,12 @@ import VosCartItem from './vos-cart-item.vue'
 export default {
   name: 'vos-cart',
   components: {VosCartItem},
-  props: {},
-  data() {
-    return {
-      title: 'vos-cart'
+  props: {
+    cart_data: {
+      type: Array,
+      default() {
+        return []
+      }
     }
   }
 }

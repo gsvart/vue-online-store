@@ -12,6 +12,9 @@ let store = new Vuex.Store({
   mutations: {
     SET_PRODUCTS_LIST: (state, products) => {
       state.products = products;
+    },
+    SET_CART: (state, product) => {
+      state.cart.push(product);
     }
   },
   actions: {
@@ -27,6 +30,9 @@ let store = new Vuex.Store({
           console.log(error);
           return error;
         })
+    },
+    ADD_TO_CART({commit}, product) {
+      commit('SET_CART', product);
     }
   },
   getters: {

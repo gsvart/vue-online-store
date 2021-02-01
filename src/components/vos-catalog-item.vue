@@ -2,8 +2,8 @@
   <div class="vos-catalog-item">
     <img class="vos-catalog-item__img" :src="require('../assets/images/' + product_data.image)" alt="image">
     <p class="vos-catalog-item__name"><b>{{ product_data.name }}</b></p>
-    <p class="vos-catalog-item__gender">Пол: <b>{{ product_data.category }}</b></p>
-    <p class="vos-catalog-item__price">Цена: <b>{{ product_data.price }} Р.</b></p>
+    <p class="vos-catalog-item__gender">Пол: <b>{{ product_data.gender }}</b></p>
+    <p class="vos-catalog-item__price">Цена: <b>{{ parseInt(product_data.price) }} Р.</b></p>
     <button 
       class="vos-catalog-item__cart-btn btn"
       @click="addToCart"  
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     addToCart() {
-      this.$emit('addToCart', this.product_data.article);
+      this.$emit('addToCart', this.product_data);
     }
   }
 }
@@ -38,11 +38,11 @@ export default {
 
 <style lang="scss">
 .vos-catalog-item {
-  flex-basis: 25%;
+  width: 30%;
   margin-bottom: $margin*2;
   padding: $padding*2;
 
-  box-shadow: 0 0 8px 0 #e0e0e0;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
 
   &__img {
     width: 100%;

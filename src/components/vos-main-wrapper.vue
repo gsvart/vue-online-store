@@ -1,7 +1,10 @@
 <template>
   <div class="vos-main-wrapper">
     <vos-catalog/>
-    <vos-cart v-if="CART.length"/>
+    <vos-cart 
+      v-if="CART.length"
+      :cart_data="CART"
+    />
   </div>
 </template>
 
@@ -31,6 +34,7 @@ export default {
 .vos-main-wrapper {
   max-width: 900px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 </style>

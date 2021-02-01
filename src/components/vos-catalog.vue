@@ -31,16 +31,18 @@ export default {
   },
   methods: {
     ...mapActions([
-      'GET_PRODUCTS_LIST'
+      'GET_PRODUCTS_LIST',
+      'ADD_TO_CART'
     ]),
     addToCart(data) {
-      console.log(data);
-      this.activeItem = data;
+      this.ADD_TO_CART(data);
+      console.log(data.article);
+      this.activeItem = data.article;
     }
   },
   mounted() {
     this.GET_PRODUCTS_LIST()
-    // Вызываем какое-либо действие приуспешном выполнении запроса
+    // Вызываем какое-либо действие при успешном выполнении запроса
     .then((response) => {
       if (response.data) {
         console.log('Данные получены.');
