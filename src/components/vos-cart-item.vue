@@ -26,24 +26,28 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .vos-cart-item {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
   padding: 10px;
-  transition: .5s;
+
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+
+  transition: 0.5s;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: 200px;
+  }
 }
 
-.vos-cart-item:last-child {
-  margin-bottom: 0;
-}
 
-.vos-cart-item__img {
-  width: 200px;
-}
 
 </style>
