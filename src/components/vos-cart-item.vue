@@ -7,8 +7,11 @@
       <p>Пол: <b>{{ cart_item_data.gender }}</b></p>
       <p>Цена: <b>{{ parseInt(cart_item_data.price) }}</b></p>
     </div>
-    <div class="vos-cart-item__quantity"></div>
-    <button>Удалить</button>
+    <div class="vos-cart-item__quantity">
+      <p>Количество:</p>
+      {{ cart_item_data.quantity }}
+    </div>
+    <button @click="deleteFromCart">Удалить</button>
   </div>
 </template>
 
@@ -22,6 +25,14 @@ export default {
         return {}
       }
     }
+  },
+  methods: {
+    deleteFromCart() {
+      this.$emit('deleteFromCart');
+    }
+  },
+  mounted() {
+    this.$set(this.cart_item_data, 'quantity', 1);
   }
 }
 </script>
@@ -47,7 +58,5 @@ export default {
     width: 200px;
   }
 }
-
-
 
 </style>
