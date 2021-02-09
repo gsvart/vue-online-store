@@ -1,6 +1,12 @@
 <template>
   <div class="vos-cart">
+
+    <router-link :to="{name: 'catalog'}">
+      <div class="vos-catalog__cart-link">Каталог</div>
+    </router-link>
+
     <h2>Корзина</h2>
+    <p v-if="!cart_data.length">В Вашей корзине ничего нет...</p>
     <vos-cart-item 
       v-for="(item, index) in cart_data" 
       :key="item.article"

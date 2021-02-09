@@ -1,5 +1,10 @@
 <template>
   <div class="vos-catalog">
+
+    <router-link :to="{name: 'cart', params: {cart_data: CART}}">
+      <div class="vos-catalog__cart-link">Корзина: {{ CART.length }}</div>
+    </router-link>
+
     <h1>Catalog: {{ activeItem }}</h1>
     <div class="vos-catalog__list">
       <vos-catalog-item
@@ -26,7 +31,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'PRODUCTS_LIST'
+      'PRODUCTS_LIST',
+      'CART'
     ])
   },
   methods: {
@@ -59,6 +65,15 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__cart-link {
+    padding: 10px 15px;
+    background: #0d00c2;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    right: 30px;
   }
 }
 
