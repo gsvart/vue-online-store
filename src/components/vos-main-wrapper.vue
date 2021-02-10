@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss">
 .vos-main-wrapper {
-  max-width: 900px;
+  width: 900px;
   margin: 0 auto;
   padding-bottom: 50px;
 }

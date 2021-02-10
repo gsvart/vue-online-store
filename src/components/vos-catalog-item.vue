@@ -42,7 +42,8 @@ export default {
   margin-bottom: $margin*2;
   padding: $padding*2;
 
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+  background: #121212;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.68);
 
   &__img {
     width: 100%;

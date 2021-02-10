@@ -5,7 +5,7 @@
       <div class="vos-catalog__cart-link">Корзина: {{ CART.length }}</div>
     </router-link>
 
-    <h1>Catalog: {{ activeItem }}</h1>
+    <h1>Catalog</h1>
     <div class="vos-catalog__list">
       <vos-catalog-item
         v-for="product in PRODUCTS_LIST"
@@ -68,12 +68,15 @@ export default {
   }
 
   &__cart-link {
-    padding: 10px 15px;
-    background: #0d00c2;
-    color: #fff;
     position: absolute;
     top: 30px;
     right: 30px;
+
+    padding: 10px 15px;
+
+    color: #ffffff;
+
+    background: #0d00c2;
   }
 }
 

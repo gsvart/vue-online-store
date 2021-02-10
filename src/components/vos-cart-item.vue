@@ -46,7 +46,8 @@ export default {
   margin-bottom: 25px;
   padding: 10px;
 
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+  background: #121212;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.68);
 
   transition: 0.5s;
 
