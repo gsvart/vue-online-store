@@ -74,9 +74,8 @@ export default {
 
     padding: 10px 15px;
 
-    color: #ffffff;
-
-    background: #0d00c2;
+    color: #006c62;
+    background: #121212;
   }
 }
 
